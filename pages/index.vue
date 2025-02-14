@@ -12,18 +12,20 @@
 
     <div class="space-y-4 mt-4 mx-4 md:mt-6 md:mx-6">
       <h2 class="text-2xl font-bold text-gray-800 text-center">Statistics</h2>
-      <NuxtLink
-          to="/installation"
-          class="focus:outline-none text-center disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:cursor-not-allowed aria-disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 shadow-sm text-white dark:text-gray-900 bg-black hover:bg-primary-600 disabled:bg-black aria-disabled:bg-black dark:bg-primary-400 dark:hover:bg-black dark:disabled:bg-primary-400 dark:aria-disabled:bg-primary-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 dark:focus-visible:outline-primary-400 inline-flex items-center"
-        >
-          Get Started
-          <i class="fa-solid fa-arrow-right flex-shrink-0 h-5 w-5"></i>
-        </NuxtLink>   
+      <div class="flex justify-center">
+        <NuxtLink
+            to="/installation"
+            class="focus:outline-none text-center disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:cursor-not-allowed aria-disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 shadow-sm text-white dark:text-gray-900 bg-black hover:bg-primary-600 disabled:bg-black aria-disabled:bg-black dark:bg-primary-400 dark:hover:bg-black dark:disabled:bg-primary-400 dark:aria-disabled:bg-primary-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 dark:focus-visible:outline-primary-400 inline-flex items-center"
+          >
+            Get Started
+            <i class="fa-solid fa-arrow-right flex-shrink-0 h-5 w-5"></i>
+          </NuxtLink>   
+      </div>
       <PackageStats />
     </div>
     <div class="space-y-4 mt-4 mx-4 md:mt-6 md:mx-6">
       <h2 class="text-2xl font-bold text-gray-800 text-center">Features</h2>
-      <div class="grid gap-4 md:grid-cols-2">
+      <div class="grid gap-4 md:grid-cols-4">
         <div v-for="(feature, index) in features" :key="index">
           <FeatureCard
             :title="feature.title"
